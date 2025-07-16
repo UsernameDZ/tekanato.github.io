@@ -1,0 +1,10 @@
+body {
+    background-color: #4f89d6;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+#catimg:hover {
+    scale: 1.2;
+    transition: scale 0.3s ease-in-out;
+}
