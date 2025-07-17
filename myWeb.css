@@ -2,6 +2,7 @@ body {
     background-color: #141010;
     font-family: Arial, sans-serif;
     color: #ffffff;
+
 }
 
 .header {
@@ -12,6 +13,7 @@ body {
 
     padding: 10px;
 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header_title {
@@ -39,10 +41,70 @@ body {
 
 a {
     text-decoration: none;
+    color: #c91eb2;
+}
+
+a:hover {
     color: #ffffff;
+    text-decoration: underline;
 }
 
 #catimg:hover {
     scale: 1.1;
     transition: scale 0.3s ease-in-out;
+}
+
+.random_buttons_div {
+    background-color: #222831;
+
+    display: flex;
+    justify-content: space-around;
+    
+    margin: 20px 0;
+    padding: 5px;
+}
+
+.random_buttons_div button {
+    background-color: #393e46;
+    color: #ffffff;
+
+    border: solid 1px #141010;
+    border-radius: 5px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    padding: 10px 20px;
+    cursor: pointer;
+
+    width: 17%;
+    height: 35px;
+}
+
+.random_buttons_div button:hover {
+    background-color: #c91eb2;
+
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+}
+
+.random_buttons_div button:active {
+    background-color: #141010;
+    scale: 0.95;
+}
+
+.footer {
+    background-color: #22283100;
+    color: #686161;
+
+    padding: 0 0 0 5px;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 10px 10px;
 }
