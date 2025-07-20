@@ -88,3 +88,101 @@ function changeAll() {
 
     imageChange.src = "images/deathPaletteImg1.jpg";
 }
+
+function bomb() {
+    const bombImg = document.getElementsByClassName('bombImg')[0];
+    bombImg.classList.remove("hidden");
+    bombImg.classList.add("visible");
+
+    const audio = new Audio("sounds/huge-explosion-87823.mp3");
+    audio.play();
+    for (let i = 0; i < 100; i++) {
+    setTimeout(() => {
+            audio.play();
+        }, 7000);
+    }
+}
+
+
+
+
+const playButton1 = document.getElementById('song1');
+const playButton2 = document.getElementById('song2');
+const playButton3 = document.getElementById('song3');
+
+playButton1.addEventListener('click', () => {
+    if (playButton1.textContent === '▶') {
+        playButton1.textContent = '❚❚';
+        playButton2.textContent = '▶';
+        playButton3.textContent = '▶'; 
+
+    } else {
+        playButton1.textContent = '▶'; 
+        playButton2.textContent = '▶';
+        playButton3.textContent = '▶';
+    }
+});
+
+playButton2.addEventListener('click', () => {
+    if (playButton2.textContent === '▶') {
+        playButton2.textContent = '❚❚';
+        playButton1.textContent = '▶';
+        playButton3.textContent = '▶';
+    } else {
+        playButton2.textContent = '▶'; 
+        playButton1.textContent = '▶';
+        playButton3.textContent = '▶';
+    }
+});
+
+playButton3.addEventListener('click', () => {
+    if (playButton3.textContent === '▶') {
+        playButton3.textContent = '❚❚';
+        playButton1.textContent = '▶';
+        playButton2.textContent = '▶';
+    } else {
+        playButton3.textContent = '▶'; 
+        playButton1.textContent = '▶';
+        playButton2.textContent = '▶';
+    }
+});
+
+
+
+const audio1 = new Audio('sounds/theDistortionistGhost.mp3');
+const audio2 = new Audio('sounds/colorbarsGhost.mp3');
+const audio3 = new Audio('sounds/dontBeliveInT(TetoAndMiku).mp3');
+
+function song1() {
+    if (playButton1.textContent === '▶') {
+        audio1.currentTime = 0;
+        audio1.play();
+        audio2.pause();
+        audio3.pause();
+} else {
+        audio1.pause();
+    }
+}
+
+function song2() {
+    if (playButton2.textContent === '▶') {
+        audio2.currentTime = 0;
+        audio2.play();
+        audio1.pause();
+        audio3.pause();
+    } else {
+        audio2.pause();
+    }
+}
+
+function song3() {
+    if (playButton3.textContent === '▶') {
+        audio3.currentTime = 0;
+        audio3.play();
+        audio1.pause();
+        audio2.pause();
+    } else {
+        audio3.pause();
+    }
+}
+

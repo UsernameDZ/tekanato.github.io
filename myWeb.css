@@ -5,6 +5,7 @@ body {
 
 }
 
+/* Header */
 .header {
     background-color: #222831;
     display: flex;
@@ -49,11 +50,78 @@ a:hover {
     text-decoration: underline;
 }
 
-#catimg:hover {
-    scale: 1.1;
-    transition: scale 0.3s ease-in-out;
+/* Home page and important */
+/* Pages div */
+
+.pages_buttons_div {
+    background-color: #ffffff00;
+
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 5px 0;
+    padding: 5px;
 }
 
+.pages_buttons_div button {
+    background-color: #393e46;
+    color: #ffffff;
+
+    font-size: 90%;
+    font-weight: bold;
+
+    text-align: center;
+
+    border: solid 1px #14101000;
+    border-radius: 5px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    padding: 10px 20px;
+    cursor: pointer;
+
+    width: 100%;
+    height: 35px;
+}
+
+.pages_buttons_div a {
+    text-decoration: none;
+    color: #ffffff;
+
+    width: 24%;
+    height: 35px;
+}
+
+.pages_buttons_div button:hover {
+    background-color: #c91eb2;
+
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+}
+
+.pages_buttons_div button:active {
+    background-color: #393e46;
+    scale: 0.95;
+}
+
+
+
+
+/*Home Cat img */
+#catimg {
+    width: 100%;
+    
+}
+#catimg:hover {
+    scale: 1.05;
+    transition: scale 0.3s ease-in-out;
+
+}
+
+
+
+
+/* Home random buttos div */
 .random_buttons_div {
     background-color: #222831;
 
@@ -68,7 +136,7 @@ a:hover {
     background-color: #393e46;
     color: #ffffff;
 
-    border: solid 1px #141010;
+    border: solid 1px #14101000;
     border-radius: 5px;
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -88,17 +156,66 @@ a:hover {
 }
 
 .random_buttons_div button:active {
-    background-color: #141010;
+    background-color: #393e46;
     scale: 0.95;
 }
 
+
+.bombButton {
+    background-color: #393e46;
+    color: #ffffff;
+
+    border: solid 1px #14101000;
+    border-radius: 5px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    padding: 10px 20px;
+    cursor: pointer;
+
+    width: 17%;
+    height: 35px;
+
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.bombButton:hover {
+    background-color: #c91eb2;
+
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+}
+
+.bombButton:active {
+    background-color: #393e46;
+    scale: 0.95;
+}
+
+.bombImg {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.bombImg.hidden {
+    visibility: hidden;
+}
+.bombImg.visible {
+    visibility: visible;
+}
+
+/* Footer */
 .footer {
     background-color: #22283100;
     color: #686161;
 
     padding: 0 0 0 5px;
 
-    position: fixed;
     bottom: 0;
     width: 100%;
 
@@ -107,4 +224,198 @@ a:hover {
 
 .footer p {
     margin: 10px 10px;
+}
+
+
+
+
+
+/* PHOTOS PAGE */
+
+.photos_div {
+    background-color: #222831;
+    padding: 2px;
+    border-radius: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-satart;    
+
+    width: auto;
+}
+
+.photos_div img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    display: block;
+
+    border-radius: 10px;
+
+    margin: 10px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photos_div a {
+    width: auto;
+    height: auto;
+}
+
+
+
+
+
+/*GAMES PAGE*/
+.games_buttons_div {
+    background-color: #22283100;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    margin: 20px 0;
+    padding: 5px;
+}
+
+.games_buttons_div button {
+    background-color: #393e46;
+    color: #ffffff;
+
+    border: solid 1px #00000000;
+    border-radius: 5px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    width: 100%;
+    height: 35px;
+
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.games_buttons_div button:hover {
+    background-color: #c91eb2;
+
+    scale: 1.01;
+    transition: all 0.3s ease-in-out;
+}
+
+.games_buttons_div button:active {
+    background-color: #393e46;
+    scale: 0.95;
+}
+
+.games_buttons_div a {
+    width: 90%;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.games_buttons_div a:hover {
+    text-decoration: none;
+    color: #c91eb2;
+}
+
+.games_buttons_div img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.game_one_div {
+    margin: 0 0 40px 0;
+    padding: 5px;
+
+    border-radius: 5px;
+
+    background-color: #222831;
+}
+
+
+
+
+/*MUSIC PAGE*/
+
+.music_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+
+    width: auto;
+
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.music_one_div {
+    background-color: #222831;
+    padding: 10px;
+    margin: 10px 0;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: line;
+    align-items: center;
+    flex-direction: left;
+}
+
+.music_div h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.music_div p {
+    margin: 0;
+    font-size: 1em;
+    color: #686161;
+}
+
+.music_one_div button {
+    background-color: #393e46;
+    color: #ffffff;
+
+    border: solid 2px #ffffff;
+    border-radius: 100%;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    padding: 10px 10px;
+    margin: 0 10px;
+
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+
+    font-weight: bold;
+    font-size: 90%;
+
+    text-align: center;
+    font-size: 60%;
+}
+
+.music_one_div button:hover {
+    background-color: #c91eb2;
+
+    scale: 1.1;
+    transition: all 0.3s ease-in-out;
+}
+
+.music_one_div button:active {
+    background-color: #393e46;
+    scale: 0.9;
+}
+
+.music_text {
+    justify-content: left;
+    align-items: left;
+
+    margin: 0 10px;
 }
