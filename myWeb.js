@@ -9,6 +9,27 @@ function theme() {
     }
 }
 
+const timer = document.getElementById('timer');
+let seconds = 0;
+let minuts = 5;
+
+function startTimer() {
+    if (seconds === 0) {
+        if (minuts === 0) {
+            timer.textContent = "Ты потратил 5 минут своей жизни";
+            return; 
+        }
+        minuts--;
+        seconds = 59;
+    } else {
+        seconds--;
+    }
+    timer.textContent = `${String(minuts).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    setTimeout(startTimer, 1000);
+}
+startTimer();
+
+
 
 function playSound1() {
     const audio = new Audio('sounds/among-us-roundstart.mp3');

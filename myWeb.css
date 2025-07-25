@@ -3,7 +3,9 @@ body {
     font-family: Arial, sans-serif;
     color: #ffffff;
 
+    cursor: url('cursors/cursorNormalPink.png'), auto;
 }
+
 
 /* Header */
 .header {
@@ -42,7 +44,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #c91eb2;
+    color: #f714d8;
 }
 
 a:hover {
@@ -52,6 +54,7 @@ a:hover {
 
 /* Home page and important */
 /* Pages div */
+
 
 .pages_buttons_div {
     background-color: #ffffff00;
@@ -93,7 +96,7 @@ a:hover {
 }
 
 .pages_buttons_div button:hover {
-    background-color: #c91eb2;
+    background-color: #db1ac1;
 
     scale: 1.05;
     transition: all 0.3s ease-in-out;
@@ -105,6 +108,29 @@ a:hover {
 }
 
 
+/* Clock Bomb*/
+
+.clock_bomb_p {
+    color: #db1ac1;
+    background-color: #393e46;
+    
+    font-size: 1.5em;
+    font-weight: bold;
+
+    text-align: center;
+
+    padding: 15px 5px;
+
+    border-radius: 20px;
+}
+
+.clock_bomb_p:hover {
+    color: #ffffff;
+    background-color: red;
+
+
+    transition: all 0.3s ease-in-out;
+}
 
 
 /*Home Cat img */
@@ -149,7 +175,7 @@ a:hover {
 }
 
 .random_buttons_div button:hover {
-    background-color: #c91eb2;
+    background-color: #db1ac1;
 
     scale: 1.05;
     transition: all 0.3s ease-in-out;
@@ -181,7 +207,7 @@ a:hover {
 }
 
 .bombButton:hover {
-    background-color: #c91eb2;
+    background-color: #db1ac1;
 
     scale: 1.05;
     transition: all 0.3s ease-in-out;
@@ -299,7 +325,7 @@ a:hover {
 }
 
 .games_buttons_div button:hover {
-    background-color: #c91eb2;
+    background-color: #db1ac1;
 
     scale: 1.01;
     transition: all 0.3s ease-in-out;
@@ -318,7 +344,7 @@ a:hover {
 
 .games_buttons_div a:hover {
     text-decoration: none;
-    color: #c91eb2;
+    color: #db1ac1;
 }
 
 .games_buttons_div img {
@@ -402,7 +428,7 @@ a:hover {
 }
 
 .music_one_div button:hover {
-    background-color: #c91eb2;
+    background-color: #db1ac1;
 
     scale: 1.1;
     transition: all 0.3s ease-in-out;
