@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "node-readability": "^3.0.0",
+    "sqlite3": "^5.1.7"
+  }
+}

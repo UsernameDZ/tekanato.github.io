@@ -3,8 +3,7 @@ body {
     font-family: Arial, sans-serif;
     color: #ffffff;
 
-    cursor: url('cursors/cursorNormalPink.png'), auto;
-}
+    cursor: url('cursors/cursorNormalPink-resize.png'), auto;}
 
 
 /* Header */
@@ -60,10 +59,12 @@ a:hover {
     background-color: #ffffff00;
 
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: center;
+    align-items: center;
+
     margin: 5px 0;
-    padding: 5px;
+
+    flex-wrap: wrap;
 }
 
 .pages_buttons_div button {
@@ -76,7 +77,6 @@ a:hover {
     text-align: center;
 
     border: solid 1px #14101000;
-    border-radius: 5px;
 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -84,21 +84,22 @@ a:hover {
     cursor: pointer;
 
     width: 100%;
-    height: 35px;
+    height: 100%;
 }
 
 .pages_buttons_div a {
     text-decoration: none;
     color: #ffffff;
 
-    width: 24%;
+    width: 20%;
     height: 35px;
+
+    padding: 0;
 }
 
 .pages_buttons_div button:hover {
     background-color: #db1ac1;
 
-    scale: 1.05;
     transition: all 0.3s ease-in-out;
 }
 
@@ -444,4 +445,45 @@ a:hover {
     align-items: left;
 
     margin: 0 10px;
+
+    width: 100%;
 }
+
+span {
+    margin: 0;
+    font-size: 1em;
+    color: #686161;
+}
+
+span:hover {
+    color: #ffffff;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    max-width: 400px;
+    height: 7px;
+
+    background-color: #393e46;
+    accent-color: #db1ac1;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.music_time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 400px;
+    height: 7px;
+
+    margin: 10px 0;
+}
+

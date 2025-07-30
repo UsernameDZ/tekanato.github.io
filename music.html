@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,7 @@
         <a href="photos.html" class="page_button"><button>Фото</button></a>
         <a href="games.html" class="page_button"><button>Игры</button></a>
         <a href="music.html" class="page_button"><button>Музыка</button></a>
+        <a href="js.html" class="page-button"><button>JS</button></a>
     </div>
 
     <p>Ну а тут вот крутая музыка<br>Скоро переделаю плеер</p>
@@ -34,32 +35,44 @@
     <div class="music_div">
 
         <div class="music_one_div">
-            <button id="song1" onclick="song1()">▶</button>
+            <button id="song1" onclick="song(0)">▶</button>
             <div class="music_text">
                 <a href="https://www.youtube.com/watch?v=NZ0muYBh2HY&list=RDNZ0muYBh2HY&start_radio=1&pp=ygU044CQWW9oaW9sb2lk44CRIFRoZSBEaXN0b3J0aW9uaXN044CQT3JpZ2luYWwgU29uZ-OAkaAHAdIHCQnNCQGHKiGM7w%3D%3D" target="_blank">
-                    <h4>【Yohioloid】 The Distortionist【Original Song】</h4>
+                    <h4>【Yohioloid】 The Distortionist【Original Song】<span>- Ghost</span></h4>
                 </a>
-                <p>Ghost</p>
+                <input type="range" id="progress1" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p id="timeActual2">00:00</p>
+                    <p>05:42</p>
+                </div>
             </div>
         </div>
 
         <div class="music_one_div">
-            <button id="song2" onclick="song2()">▶</button>
+            <button id="song2" onclick="song(1)">▶</button>
             <div class="music_text">
                 <a href="https://youtu.be/hVPff92tkBE?si=J6jAVm0wqLnlh-nj" target="_blank">
-                    <h4>colorbars</h4>
+                    <h4>colorbars <span>- Ghost</span></h4>
                 </a>
-                <p>Ghost</p>
+                <input type="range" id="progress2" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p id="timeActual2">00:00</p>
+                    <p>04:21</p>
+                </div>
             </div>
         </div>
 
         <div class="music_one_div">
-            <button id="song3" onclick="song3()">▶</button>
+            <button id="song3" onclick="song(2)">▶</button>
             <div class="music_text">
                 <a href="https://youtu.be/Jtm6ikBIl0g?si=ZPZ2ToB3KcanHI8q" target="_blank">
-                    <h4>Don’t Believe in T</h4>
+                    <h4>Don’t Believe in T <span>- PINOCCHIOP</span></h4>
                 </a>
-                <p>PINOCCHIOP</p>
+                <input type="range" id="progress3" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p id="timeActual2">00:00</p>
+                    <p>02:43</p>
+                </div>
             </div>
         </div>
 
@@ -67,9 +80,9 @@
 
     </div>
     <footer class="footer">
-        <p class="footer_text">Этот сайт - шутка. V 1.5 от 25/07/2025</p>
+        <p class="footer_text">Этот сайт - шутка. V 1.6 от 30/07/2025</p>
     </footer>
 
-    <script src="myWeb.js"></script>
+    <script src="music.js"></script>
 </body>
 </html>
