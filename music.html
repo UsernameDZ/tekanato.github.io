@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="myWeb.css">
+    <link rel="stylesheet" href="music.css">
     <script src="https://kit.fontawesome.com/629d85c946.js" crossorigin="anonymous"></script>
     <title>tekanato-music</title>
 </head>
@@ -30,11 +30,17 @@
         <a href="js.html" class="page-button"><button>JS</button></a>
     </div>
 
-    <p>Ну а тут вот крутая музыка<br>Скоро переделаю плеер</p>
+    <p>Ну а тут вот крутая музыка<br>У меня шикарный музыкальный вкус<br>Уже переделал плеер. Как вам?</p>
 
     <div class="music_div">
+        <div class="music_one_div playlist" class="playListDiv">
+            <p class="onPlaylistP">Включить плейлист</p>
+            <button id="onPlaylistButton" onclick="onPlaylist()">▶</button>
+            <p class="onPlaylistP" id="playlistModeP">Режим: рандом</p>
+            <button id="playlistModeButton" onclick="playlistMode()">⤭</button>
+        </div>
 
-        <div class="music_one_div">
+        <div class="music_one_div" id="music1">
             <button id="song1" onclick="song(0)">▶</button>
             <div class="music_text">
                 <a href="https://www.youtube.com/watch?v=NZ0muYBh2HY&list=RDNZ0muYBh2HY&start_radio=1&pp=ygU044CQWW9oaW9sb2lk44CRIFRoZSBEaXN0b3J0aW9uaXN044CQT3JpZ2luYWwgU29uZ-OAkaAHAdIHCQnNCQGHKiGM7w%3D%3D" target="_blank">
@@ -42,13 +48,13 @@
                 </a>
                 <input type="range" id="progress1" value="0" min="0" max="1000" step="1">
                 <div class="music_time">
-                    <p id="timeActual2">00:00</p>
-                    <p>05:42</p>
+                    <p class="timeP" id="timeActual1">00:00</p>
+                    <p class="timeP" id="timeAll1">js файл не работает, напишите в тг @klee8800</p>
                 </div>
             </div>
         </div>
 
-        <div class="music_one_div">
+        <div class="music_one_div" id="music2">
             <button id="song2" onclick="song(1)">▶</button>
             <div class="music_text">
                 <a href="https://youtu.be/hVPff92tkBE?si=J6jAVm0wqLnlh-nj" target="_blank">
@@ -56,13 +62,13 @@
                 </a>
                 <input type="range" id="progress2" value="0" min="0" max="1000" step="1">
                 <div class="music_time">
-                    <p id="timeActual2">00:00</p>
-                    <p>04:21</p>
+                    <p class="timeP" id="timeActual2">00:00</p>
+                    <p class="timeP" id="timeAll2">00:00</p>
                 </div>
             </div>
         </div>
 
-        <div class="music_one_div">
+        <div class="music_one_div" id="music3">
             <button id="song3" onclick="song(2)">▶</button>
             <div class="music_text">
                 <a href="https://youtu.be/Jtm6ikBIl0g?si=ZPZ2ToB3KcanHI8q" target="_blank">
@@ -70,8 +76,162 @@
                 </a>
                 <input type="range" id="progress3" value="0" min="0" max="1000" step="1">
                 <div class="music_time">
-                    <p id="timeActual2">00:00</p>
-                    <p>02:43</p>
+                    <p class="timeP" id="timeActual3">00:00</p>
+                    <p class="timeP" id="timeAll3">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music4">
+            <button id="song4" onclick="song(3)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/wKsn3ZW9BZo?si=cNu_KrDkBgZyL4KX" target="_blank">
+                    <h4>Yuma / Spider on the Wall [Original Song 2022 ver.] <span>- Ghost</span></h4>
+                </a>
+                <input type="range" id="progress4" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual4">00:00</p>
+                    <p class="timeP" id="timeAll4">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music5">
+            <button id="song5" onclick="song(4)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/vjBFftpQxxM?si=nLFISdrPuu0gRHlI" target="_blank">
+                    <h4>BUTCHER VANITY ft. Yi Xi <span>- Vane Lily</span></h4>
+                </a>
+                <input type="range" id="progress5" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual5">00:00</p>
+                    <p class="timeP" id="timeAll5">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music6">
+            <button id="song6" onclick="song(5)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/m-fsseylop0?si=e5kaioMRzKzBxVk8" target="_blank">
+                    <h4>Avalon <span>- Alan Walker, Anne Gudrun</span></h4>
+                </a>
+                <input type="range" id="progress6" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual6">00:00</p>
+                    <p class="timeP" id="timeAll6">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music7">
+            <button id="song7" onclick="song(6)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/4u6V6UisBz8?si=KnbrRItYnEW03clo" target="_blank">
+                    <h4>Decisive Battle <span>- Shiro Sagisu</span></h4>
+                </a>
+                <input type="range" id="progress7" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual7">00:00</p>
+                    <p class="timeP" id="timeAll7">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music8">
+            <button id="song8" onclick="song(7)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/9Zj0JOHJR-s?si=3eTPV_ido1flVbFH" target="_blank">
+                    <h4>My Ordinary Life <span>- The Living Tombstone</span></h4>
+                </a>
+                <input type="range" id="progress8" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual8">00:00</p>
+                    <p class="timeP" id="timeAll8">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music9">
+            <button id="song9" onclick="song(8)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/EYKrl61cUsY?si=bh4Om-pUtBoAwMG8" target="_blank">
+                    <h4>Kevin / Reckless Battery Burns [Original Song Collaboration] <span>- Ghost</span></h4>
+                </a>
+                <input type="range" id="progress9" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual9">00:00</p>
+                    <p class="timeP" id="timeAll9">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music10">
+            <button id="song10" onclick="song(9)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/Xn676-fLq7I?si=-s7jUfrisihvFFly" target="_blank">
+                    <h4>Stronger (What Doesn't Kill You) <span>- Kelly Clarkson</span></h4>
+                </a>
+                <input type="range" id="progress10" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual10">00:00</p>
+                    <p class="timeP" id="timeAll10">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music11">
+            <button id="song11" onclick="song(10)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/Jj1_mfUzjOs?si=g1BQRkFZw_RDGddL" target="_blank">
+                    <h4> UNDEAD <span>- YOASOBI</span></h4>
+                </a>
+                <input type="range" id="progress11" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual11">00:00</p>
+                    <p class="timeP" id="timeAll11">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music12">
+            <button id="song12" onclick="song(11)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/vqe2WMZYYvQ?si=ObsABgNh0SCgOlIh" target="_blank">
+                    <h4>SCAPEG♾AT <span>- Ghost</span></h4>
+                </a>
+                <input type="range" id="progress12" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual12">00:00</p>
+                    <p class="timeP" id="timeAll12">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music13">
+            <button id="song13" onclick="song(12)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/B7xai5u_tnk?si=S-Gd7zhwX4KUYfm5" target="_blank">
+                    <h4>Monody (feat. Laura Brehm) <span>- TheFatRat</span></h4>
+                </a>
+                <input type="range" id="progress13" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual13">00:00</p>
+                    <p class="timeP" id="timeAll13">00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="music_one_div" id="music14">
+            <button id="song14" onclick="song(13)">▶</button>
+            <div class="music_text">
+                <a href="https://youtu.be/04BqFwERmac?si=NESPuOdc7uZMsN84" target="_blank">
+                    <h4>【v4flower】HYPERDONTIA【Original Song Collaboration】 <span>- Ghost</span></h4>
+                </a>
+                <input type="range" id="progress14" value="0" min="0" max="1000" step="1">
+                <div class="music_time">
+                    <p class="timeP" id="timeActual14">00:00</p>
+                    <p class="timeP" id="timeAll14">00:00</p>
                 </div>
             </div>
         </div>
@@ -80,7 +240,7 @@
 
     </div>
     <footer class="footer">
-        <p class="footer_text">Этот сайт - шутка. V 1.6 от 30/07/2025</p>
+        <p class="footer_text">Этот сайт - шутка. V 1.7 от 04/08/2025 (нет август T_T)</p>
     </footer>
 
     <script src="music.js"></script>
